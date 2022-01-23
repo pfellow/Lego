@@ -1,0 +1,86 @@
+.main {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-phone,
+.personal-area {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.personal-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu-list,
+.menu-buttons-list {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu-list {
+    justify-content: space-between;
+}
+
+.menu-buttons-list {
+    justify-content: flex-end;
+}
+
+li {
+    list-style-type: none;
+  }
+  
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.specials,
+.services-tiles,
+.advantages,
+.accomodations {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.specials-left,
+.luxury-rooms,
+.service-tile {
+    width: 50%;
+}
+
+.special-title,
+.service-link,
+.special-title-right {
+    font-weight: bold;
+}
+
+.advantage {
+    width: 25%;
+}
+
+.accomodation {
+    width: 33%;
+}

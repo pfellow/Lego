@@ -2,31 +2,35 @@
         font-family: Muller;
         src: url(/fonts/MullerRegular.woff);
     }
-    
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         background: #E5E5E5;
         font-family: Muller;
         font-style: normal;
         font-weight: normal;
     }
-    
+
     .main {
         width: 1170px;
         margin: 0 auto;
     }
-    
+
     a {
         text-decoration: none;
         color: inherit;
     }
-    
+
     h2 {
         margin-top: 70px;
         margin-bottom: 20px;
         font-size: 40px;
         font-weight: normal;
     }
-    
+
     .logo {
         display: flex;
         justify-content: space-between;
@@ -35,13 +39,13 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    
+
     .logo-phone,
     .personal-area {
         display: flex;
         align-items: center;
     }
-    
+
     .logo-phone {
         justify-content: space-between;
         flex: 0 0 465px;
@@ -49,7 +53,7 @@
         font-size: 20px;
         color: #666666;
     }
-    
+
     .personal-area {
         display: flex;
         align-items: center;
@@ -62,7 +66,7 @@
         background-repeat: no-repeat;
         padding-left: 20px;
     }
-    
+
     .nav-top {
         width: 100%;
         display: flex;
@@ -71,76 +75,76 @@
         background: #FFFFFF;
         border-radius: 15px;
     }
-    
+
     .main-menu-list,
     .menu-buttons-list {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
-    
+
     .main-menu-list {
         flex: 1 1 743px;
     }
-    
+
     .main-menu-list li a {
         font-size: 16px;
         color: #666666;
     }
-    
+
     .separator {
         width: 1px;
         height: 50px;
         background: #E1E1E1;
     }
-    
+
     .menu-buttons-list {
         flex: 1 1 426px;
     }
-    
+
     .menu-buttons {
         display: flex;
         width: 100%;
         justify-content: space-evenly;
     }
-    
+
     .button-main {
+        display: inline-block;
+        padding: 10px 20px;
         background: #FFFFFF;
         border-radius: 10px;
         border: 1px solid #CC9933;
-        padding: 10px 20px;
-        display: inline-block;
         color: #CC9933;
     }
-    
+
     li {
         list-style-type: none;
     }
-    
+
     ul {
         margin-left: 0;
         padding-left: 0;
     }
-    
+
     .specials {
         width: 100%;
         min-height: 540px;
         display: flex;
         justify-content: space-between;
     }
-    
+
     .specials-left {
         flex: 0 0 573px;
         min-height: 540px;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .luxury-rooms {
         flex: 0 0 573px;
         min-height: 540px;
     }
-    
+
     .maldives,
     .crete {
         min-height: 258px;
@@ -148,27 +152,27 @@
         flex: 0 0 573px;
         background-repeat: no-repeat;
     }
-    
+
     .maldives {
         background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/Rectangle14.png");
     }
-    
+
     .crete {
         margin-top: 24px;
         background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/Rectangle15.png");
     }
-    
+
     .luxury-rooms {
         background: url('../img/33.png');
         border-radius: 15px;
     }
-    
+
     .special-title,
     .service-link,
     .special-title-right {
         font-weight: bold;
     }
-    
+
     .special-title {
         margin: 40px 0 0 40px;
         width: 299px;
@@ -177,7 +181,7 @@
         font-weight: bold;
         font-size: 40px;
     }
-    
+
     .special-price {
         margin: 15px 0 0 40px;
         font-size: 20px;
@@ -185,7 +189,7 @@
         color: white;
         opacity: .8;
     }
-    
+
     .special-link {
         display: block;
         margin: 47px 0 40px 40px;
@@ -193,7 +197,7 @@
         line-height: 16px;
         color: #FFCC66;
     }
-    
+
     .special-link-arrow {
         display: inline-block;
         width: 11px;
@@ -203,7 +207,7 @@
         box-sizing: border-box;
         transform: rotate(45deg);
     }
-    
+
     .special-title-right {
         margin: 211px 0 0 40px;
         width: 299px;
@@ -212,7 +216,7 @@
         font-weight: bold;
         font-size: 60px;
     }
-    
+
     .special-price-right {
         margin: 15px 0 0 40px;
         font-size: 30px;
@@ -220,20 +224,20 @@
         color: white;
         opacity: .8;
     }
-    
+
     .about-us {
         width: 888px;
         font-size: 16px;
         line-height: 200%;
     }
-    
+
     .services-tiles {
         width: 100%;
         min-height: 683px;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .service-tile {
         width: 573px;
         min-height: 330px;
@@ -244,59 +248,59 @@
         margin-bottom: 23px;
         background-repeat: no-repeat;
     }
-    
+
     .service-tile:nth-child(2n) {
         margin-left: 23px;
     }
-    
+
     .service-tile:last-child,
     .service-tile:nth-last-child(2) {
         margin-bottom: 0;
     }
-    
+
     .service-first {
         background-image: url("../img/10.png");
     }
-    
+
     .service-second {
         background-image: url("../img/11.png");
     }
-    
+
     .service-third {
         background-image: url("../img/12.png");
     }
-    
+
     .service-fourth {
         background-image: url("../img/13.png");
     }
-    
+
     .service-link {
         margin: 191px 0 0 45px;
+        height: 40px;
         font-size: 20px;
         line-height: 40px;
-        height: 40px;
         color: #CC9933;
     }
-    
+
     .arrow-services {
         border-top: 2px solid #CC9933;
         border-right: 2px solid #CC9933;
     }
-    
+
     .service-description {
-        font-size: 16px;
-        line-height: 200%;
         height: 51px;
         width: 402px;
         margin: 0 0 50px 45px;
+        font-size: 16px;
+        line-height: 200%;
     }
-    
+
     .advantages {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .advantage {
         width: 275px;
         min-height: 275px;
@@ -306,61 +310,61 @@
         background-position: top 40px left 40px;
         background-repeat: no-repeat;
     }
-    
+
     .advantage-1 {
         background-image: url("../img/bathtub.svg");
     }
-    
+
     .advantage-2 {
         background-image: url("../img/hanger.svg");
     }
-    
+
     .advantage-3 {
         background-image: url("../img/heating.svg");
     }
-    
+
     .advantage-4 {
         background-image: url("../img/hotel-key.svg");
     }
-    
+
     .advantage-5 {
         background-image: url("../img/parking.svg");
     }
-    
+
     .advantage-6 {
         background-image: url("../img/reception.svg");
     }
-    
+
     .advantage-7 {
         background-image: url("../img/security-box.svg");
     }
-    
+
     .advantage-last {
         background-image: url("../img/swimming-pool.svg");
     }
-    
+
     .advantage:not(:nth-child(4n)) {
         margin-right: 23px;
     }
-    
+
     .advantage:nth-last-child(-n+4) {
         margin-bottom: 0;
     }
-    
+
     .advantage-description {
-        font-size: 16px;
-        line-height: 200%;
         min-height: 118px;
         width: 188px;
         margin: 116px 0 41px 45px;
+        font-size: 16px;
+        line-height: 200%;
     }
-    
+
     .accomodations {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .accomodation {
         width: 374px;
         min-height: 440px;
@@ -370,65 +374,65 @@
         border-radius: 15px;
         margin-bottom: 23px;
     }
-    
+
     .accomodation:not(:nth-child(3n)) {
         margin-right: 23px;
     }
-    
+
     .accomodation:nth-last-child(-n+3) {
         margin-bottom: 0;
     }
-    
+
     .price-and-stars {
         margin: 40px 0 0 45px;
     }
-    
+
     .accomodation-price {
         color: #999999;
         font-size: 16px;
     }
-    
+
     .accomodation-price-numbers {
-        color: #000;
+        color: black;
         font-size: 20px;
         font-weight: bold;
     }
-    
+
     .accomodation-price-night {
-        color: #000;
+        color: black;
         font-size: 16px;
     }
-    
+
     .place {
         margin: 16px 0 0 45px;
-        color: #000;
+        color: black;
         font-size: 16px;
     }
-    
+
     .city {
         margin: 16px 0 0 45px;
         color: #999999;
         font-size: 16px;
     }
-    
+
     .rooms {
         margin: 20px 0 40px 45px;
     }
-    
+
     .all-accomodations {
         margin: 373px 0 0 54px;
     }
-    
+
     .accomodation-last {
         background-image: url('../img/41.png');
         background-repeat: no-repeat;
     }
-    
+
     .all-accomodations-link {
         color: white;
         font-size: 20px;
     }
-    
+
     .arrow-accomodation {
         border-top: 2px solid #FFF;
         border-right: 2px solid #FFF;

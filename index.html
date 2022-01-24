@@ -27,7 +27,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#why">Why us</a></li>
                     <li><a href="#accomodation">Accomodation</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#want">Blog</a></li>
                     <li><a href="#">Contacts</a></li>
                 </ul>
                 <div class="separator"></div>
@@ -332,6 +332,51 @@
                 </div>
             </div>
         </section>
+        <section class="want-tour" id="want">
+            <h2>Want tour</h2>
+            <form class="tour-form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <div class="tour-form-element">
+                    <div class="tour-form-element-label">City from</div>
+                    <select name="depart-city">
+                        <option value="spb">Saint-Petersburg</option>
+                        <option value="spb">Saint-Petersburg</option>
+                    </select>
+                </div>
+                <div class="tour-form-element">
+                    <div class="tour-form-element-label">Country</div>
+                    <select name="country">
+                        <option value="austr">Australia</option>
+                        <option value="austr">Australia</option>
+                    </select>
+                </div>
+                <div class="tour-form-element">
+                    <div class="tour-form-element-label">Date of arrival</div>
+                    <input class="tour-form-input" type="date" name="date">
+                </div>
+                <div class="tour-form-element">
+                    <div class="tour-form-element-label">Nights</div>
+                    <input class="tour-form-input" type="number" value="6" name="nights">
+                </div>
+                <div class="tour-form-element">
+                    <div class="tour-form-element-label">Tourists</div>
+                    <input class="tour-form-input" type="number" value="2" name="tourists" required>
+                </div>
+                <div class="tour-form-element">
+                    <button type="submit" class="button-main">Find</button>
+                </div>
+            </form>
+        </section>
+        <section class="contacts-section" id="contacts">
+            <h2>Contacts</h2>
+            <div class="contacts">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae reiciendis quaerat
+                molestias sed, atque provident voluptatibus, nam laboriosam ea voluptatem, minus delectus sit. Sunt
+                provident nihil dignissimos tempore, dolorem sed!</div>
+        </section>
+        <footer>
+            <div>FOOTER Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quidem id quisquam eaque, veritatis
+                voluptate quam obcaecati repellat maxime iure eius nulla rerum saepe unde, totam necessitatibus optio
+                distinctio eligendi?</div>
+        </footer>
 
     </div>
 </body>

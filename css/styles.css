@@ -1,10 +1,28 @@
     @font-face {
         font-family: Muller;
-        src: url(/fonts/MullerRegular.woff);
+        src: url(/fonts/MullerRegular.woff) format('woff'), url(/fonts/MullerRegular.woff2) format('woff2');
+        font-display: swap;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: Muller;
+        src: url(/fonts/MullerBold.woff) format('woff'), url(/fonts/MullerBold.woff2) format('woff2');
+        font-display: swap;
+        font-weight: bold;
+        font-style: normal;
     }
 
     * {
         box-sizing: border-box;
+    }
+
+    :root {
+        --link-main-color: #CC9933;
+        --link-hover-color: #E9C479;
+        --link-active-color: #A47312;
+        --additional-text-color: #999999;
     }
 
     body {
@@ -22,7 +40,27 @@
     a {
         text-decoration: none;
         color: inherit;
+        transition: color .2s ease;
     }
+
+    a:hover {
+        color: var(--link-hover-color);
+    }
+
+    a:hover>span {
+        border-top: 2px solid var(--link-hover-color);
+        border-right: 2px solid var(--link-hover-color);
+    }
+
+    a:active {
+        color: var(--link-active-color);
+    }
+
+    a:active>span {
+        border-top: 2px solid var(--link-active-color);
+        border-right: 2px solid var(--link-active-color);
+    }
+
 
     li {
         list-style-type: none;
@@ -66,13 +104,26 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+    }
+
+    .top-area__link {
         font-size: 16px;
-        color: #CC9933;
-        background-image: url('../img/arrow.svg');
-        background-position: left center;
-        background-size: 16px;
-        background-repeat: no-repeat;
+        color: var(--link-main-color);
         padding-left: 20px;
+    }
+
+    .top-area__link svg path {
+        transition-property: fill;
+        transition-duration: .2s;
+        transition-timing-function: ease;
+    }
+
+    .top-area__link:hover svg path {
+        fill: var(--link-hover-color);
+    }
+
+    .top-area__link:active svg path {
+        fill: var(--link-active-color);
     }
 
     /* NAV_TOP */
@@ -112,8 +163,23 @@
         padding: 10px 20px;
         background: #FFFFFF;
         border-radius: 10px;
-        border: 1px solid #CC9933;
-        color: #CC9933;
+        border: 1px solid var(--link-main-color);
+        color: var(--link-main-color);
+        transition-property: color, background-color, box-shadow;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+    }
+
+    .button:hover {
+        background-color: var(--link-hover-color);
+        color: white;
+        box-shadow: 1px 1px 1px var(--link-hover-color);
+    }
+
+    .button:active {
+        background-color: var(--link-active-color);
+        color: white;
+        box-shadow: 0 0 0;
     }
 
     /* SPECIALS */
@@ -136,9 +202,10 @@
     }
 
     .specials__section_luxury-rooms {
-        background: url('../img/33.png');
+        background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url('../img/33.png');
         border-radius: 15px;
-
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        /* transform: rotate(-90deg); */
     }
 
     .specials__offer {
@@ -202,6 +269,9 @@
         border-right: 2px solid #FFCC66;
         box-sizing: border-box;
         transform: rotate(45deg);
+        color: inherit;
+        transition: border-top .2s ease;
+        transition: border-right .2s ease;
     }
 
     /* ABOUT */
@@ -256,12 +326,12 @@
         height: 40px;
         font-size: 20px;
         line-height: 40px;
-        color: #CC9933;
+        color: var(--link-active-color);
     }
 
     .services__arrow {
-        border-top: 2px solid #CC9933;
-        border-right: 2px solid #CC9933;
+        border-top: 2px solid var(--link-active-color);
+        border-right: 2px solid var(--link-active-color);
     }
 
     .services__description {
@@ -369,7 +439,7 @@
     }
 
     .accomodations__price {
-        color: #999999;
+        color: var(--additional-text-color);
         font-size: 16px;
     }
 
@@ -392,7 +462,7 @@
 
     .accomodations__city {
         margin: 16px 0 0 45px;
-        color: #999999;
+        color: var(--additional-text-color);
         font-size: 16px;
     }
 
@@ -405,6 +475,7 @@
     }
 
     .accomodations__accomodation_last {
+        position: relative;
         background-image: url('../img/41.png');
         background-repeat: no-repeat;
     }
@@ -412,6 +483,15 @@
     .accomodations__link {
         color: white;
         font-size: 20px;
+    }
+
+    .accomodations__link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 
     .accomodations__arrow {
@@ -548,13 +628,13 @@
     .contacts__additional {
         font-size: 16px;
         line-height: 150%;
-        color: #CC9933;
+        color: var(--link-main-color);
     }
 
     .contacts__email {
         font-size: 16px;
         line-height: 150%;
-        color: #999999;
+        color: var(--additional-text-color);
     }
 
     .contacts__button {
